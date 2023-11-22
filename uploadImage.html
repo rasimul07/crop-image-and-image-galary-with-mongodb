@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Selected Image</title>
+    <style>
+        #imagePreview {
+            /* max-width: 100%; */
+            max-height: 200px;
+            margin-top: 10px;
+            /* display: none; */
+        }
+        #container{
+            display: flex;
+        }
+        #cropbtn{
+            padding:'5px'
+        }
+        #output{
+             max-width: 300px;
+        }
+      
+    </style>
+    <link rel="stylesheet" href="./node_modules/cropperjs/dist/cropper.min.css">
+    
+</head>
+
+<body>
+
+    <span>
+        File Upload
+        <input type="file" id="photo" name="photo" accept="image/png, image/jpeg">
+    </span>
+
+    <div id="container">
+        <div >
+            <img id="imagePreview" alt="Selected Image">
+            <button id="cropbtn">Crop Image</button>
+        </div>
+        <div>
+            <img id="output" alt="Output Image">
+        </div>
+
+    </div>
+    <script src="./node_modules/cropperjs/dist/cropper.min.js"></script>
+    <!-- <script src="./script.js" defer></script> -->
+    <script src="./cropImage.js"></script>
+</body>
+
+</html>
+
+
